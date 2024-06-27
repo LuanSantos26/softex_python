@@ -21,7 +21,8 @@ def menu():
     print("1-Valor a pagar")
     print("2-cadastrar")
     opcao = int(input("digite a opcao escolhida: "))
-    return opcao
+    return opcao 
+# O return pode retornar mais funcções basta colocar a virgula e a outra função que deseja obter retorno.
 
 def calcular_servico(quant_horas, quant_servicos):
     pagar = quant_horas*quant_servicos*10
