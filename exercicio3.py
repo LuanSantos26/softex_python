@@ -1,13 +1,14 @@
 def main():
+     
      quantidades=5
      soma=0
      for i in range (quantidades):
          numero=int(input(f"digite o {i+1} numero: "))
          soma=soma+numero
-         media=soma/quantidades
+     media=soma/quantidades
 
-         print("soma:", soma)
-         print("edia:", media)
+     print("soma:", soma)
+     print("edia:", media)
 main()
 
 
