@@ -1,3 +1,4 @@
+#Dia 18/07/2024
 def dividir():
     try:
         numerador =  int(input('Digite o numerador desejado: '))
