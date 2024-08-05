@@ -1,16 +1,18 @@
-class carro:
+class Carro:
     #caracteristica - atributos - variavel
-    marca = "Civic"
-    modelo = "Honda"
+    marca = "Honda"
+    modelo = "Civic"
     ano = 2010
     cor = "Preto"
     velocidade = 0
     #comportamentos - métodos -> funções
-    def acelerar(self, velocidade_nova):
-        self.velocidade += velocidade_nova
-        print(f"O carro acelerou para {self.velocidade} km/h")
-        if self.velocidade > 200:
-            print("Velocidade excedida!")
-
+    def exibir_infos(self):
+        self.marca = "Honda"
+        self.modelo = "Civic"
+        self.ano = 2010
+        self.cor = "Preto"
+        self.velocidade = 0
+        print(f"Marca: {self.marca} , Modelo: {self.modelo} ,ano: {self.ano} ,cor: {self.cor} ,velocidade:{self.velocidade} mk/h ")
+        
 
 #alt + seta move o codigo...
