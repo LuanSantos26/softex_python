@@ -14,6 +14,9 @@ class Carro:
         cor = "Preto"
         velocidade = 0
         print(f"Marca: {self.marca} , Modelo: {self.modelo} ,ano: {self.ano} ,cor: {self.cor} ,velocidade:{self.velocidade} mk/h ")
-        
+    def acelerar(self):
+        self.velocidade = 10
+    def frear(self):
+        self.velocidade = - 10
 
 #alt + seta move o codigo...
