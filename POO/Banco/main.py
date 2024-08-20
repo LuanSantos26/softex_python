@@ -1,3 +1,3 @@
-from banco import Banco
+from conta import Banco
 def main():
-    minha_conta = conta_bancaria ("Luan", 0, )
+    conta = minha_conta ("Luan", 0, 26249910)
