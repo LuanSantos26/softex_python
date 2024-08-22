@@ -1,7 +1,7 @@
 class Conta_Bancaria:
-    def __init__(self, titular, senha):
+    def __init__(self, titular, senha , saldo=0):
         self.titular = titular
-        self.__saldo = 0
+        self.__saldo = saldo
         self.__senha = senha
 
     def consultar_saldo(self, senha):
@@ -39,3 +39,4 @@ class Conta_Bancaria:
 
     def __validar_senha(self, senha):
         return self.__senha == senha
+    

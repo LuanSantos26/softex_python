@@ -1,9 +1,11 @@
-from conta import Conta_Bancaria
+from conta_bancaria import Conta_Bancaria
+from conta_corrente import Conta_corrente
 
 def main():
     titular = input("Digite o nome do titular da conta: ")
     senha = input("Digite a senha da conta: ")
     conta = Conta_Bancaria(titular, senha)
+    Cc = Conta_corrente (titular, senha,500)
 
     while True:
         print("\nMenu:")
@@ -35,4 +37,4 @@ def main():
         else:
             print("Opção inválida. Tente novamente.")
 
-    main()
+main()
