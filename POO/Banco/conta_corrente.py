@@ -1,6 +1,6 @@
 from conta_bancaria import Conta_Bancaria
 class Conta_corrente(Conta_Bancaria):
-    def __init__(self, titular, senha, limite):
+    def __init__(self, titular, senha, limite = 500):
         super().__init__(titular, senha)
         self.limite = limite 
         
