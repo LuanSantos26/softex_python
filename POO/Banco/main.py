@@ -1,9 +1,9 @@
-from conta import ContaBancaria
+from conta import Conta_Bancaria
 
 def main():
     titular = input("Digite o nome do titular da conta: ")
     senha = input("Digite a senha da conta: ")
-    conta = ContaBancaria(titular, senha)
+    conta = Conta_Bancaria(titular, senha)
 
     while True:
         print("\nMenu:")
