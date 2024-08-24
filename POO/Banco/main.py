@@ -1,40 +1,57 @@
-from conta_bancaria import Conta_Bancaria
-from conta_corrente import Conta_corrente
+from conta_corrente import ContaCorrente
+from conta_poupanca import ContaPoupanca
+from conta_especial import ContaEspecial 
 
 def main():
-    titular = input("Digite o nome do titular da conta: ")
-    senha = input("Digite a senha da conta: ")
-    conta = Conta_Bancaria(titular, senha)
-    Conta_Corrente = Conta_corrente (titular, senha, 500)
+    minha_conta = ContaCorrente('Luan', '2624', 1000)
+    minha_conta_poupanca = ContaPoupanca('Luan', '2624')
+    mc_especial = ContaEspecial("Luan", '2624', 0, 500, '12/12/2000')
 
-    while True:
-        print("\nMenu:")
-        print("1. Consultar Saldo")
-        print("2. Depositar")
-        print("3. Sacar")
-        print("4. Alterar Senha")
-        print("5. Sair")
-        opcao = input("Escolha uma opção: ")
 
-        if opcao == "1":
-            senha = input("Digite a senha: ")
-            print(conta.consultar_saldo(senha))
-        elif opcao == "2":
-            valor = float(input("Digite o valor a ser depositado: "))
-            senha = input("Digite a senha: ")
-            print(conta.depositar(valor, senha))
-        elif opcao == "3":
-            valor = float(input("Digite o valor a ser sacado: "))
-            senha = input("Digite a senha: ")
-            print(conta.sacar(valor, senha))
-        elif opcao == "4":
-            senha_atual = input("Digite a senha atual: ")
-            nova_senha = input("Digite a nova senha: ")
-            print(conta.alterar_senha(senha_atual, nova_senha))
-        elif opcao == "5":
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida. Tente novamente.")
+    print("Conta Corrente")
+    print("limite: ", minha_conta.limite)
+    print("Meu saldo:", minha_conta.get_saldo())
+    minha_conta.depositar(500)
+    print("Meu saldo:", minha_conta.get_saldo())
+    retorno = minha_conta.sacar(700)
+    if retorno:
+        print("Saque realizado com sucesso")
+    else:
+        print("Saque não realizado")
+    print("Meu saldo:", minha_conta.get_saldo())
+
+    retorno = minha_conta.sacar(2000)
+    if retorno:
+        print("Saque realizado com sucesso")
+    else:
+        print("Saque não realizado")
+    print("Meu saldo:", minha_conta.get_saldo())
+    print(minha_conta.detalhar_conta())
+
+
+    print("Conta Poupança")
+    print("Meu saldo:", minha_conta_poupanca.get_saldo())
+    minha_conta_poupanca.depositar(200)
+    print("Meu saldo:", minha_conta_poupanca.get_saldo())
+    retorno = minha_conta_poupanca.sacar(300)
+    if retorno:
+        print("Saque realizado com sucesso")
+    else:
+        print("Saque não realizado")
+    print("Meu saldo:", minha_conta_poupanca.get_saldo())
+    minha_conta_poupanca.render_juros(10)
+    print("Meu saldo:", minha_conta_poupanca.get_saldo())
+    print(minha_conta_poupanca.detalhar_conta())
+
+    print("Listas...")
+    lista_contas = [minha_conta, minha_conta_poupanca]
+    for conta in lista_contas:
+        print(conta.detalhar_conta())
+
+
+    print("Conta Especial")
+    print(mc_especial.get_saldo())
+    mc_especial.depositar(1000)
+    print(mc_especial.detalhar_conta())
 
 main()
