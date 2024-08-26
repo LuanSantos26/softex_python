@@ -1,6 +1,10 @@
 class animal ():
-    def __init__(self, nome , especie, tipo, raça):
+    def __init__(self, nome , idade):
         self.nome = nome
-        self.especie = especie
-        self.tipo = tipo
-        self.raça = raça 
+        self.idade = idade
+        
+    def fazer_som():
+        print('O animal esta fazendo um som')
+        
+    def movimentar():
+        print('O animal esta se movimentando')
