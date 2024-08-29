@@ -1,10 +1,12 @@
 from conta_corrente import ContaCorrente
 from conta_poupanca import ContaPoupanca
+from conta_especial import ContaEspecial
 
 
 def main():
     minha_conta = ContaCorrente('Luan', '2624', 1000)
     minha_conta_poupanca = ContaPoupanca('Luan', '2624')
+    mc_especial = ContaEspecial("Luan", '1234', 0, 500, '12/12/2000')
 
     print("Conta Corrente")
     print("limite: ", minha_conta.limite)
