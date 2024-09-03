@@ -6,5 +6,5 @@ class ParticipantesTorneio:
 
 
     def inscrição(self, inscrição):
-        self.incrição = True
+        self.incrição = None
        
