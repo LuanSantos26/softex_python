@@ -1,9 +1,9 @@
 class livro:
     def __init__(self, titulo: str, autor: str, ano: int, editora:"Nao_Informado"):
         self.titulo = titulo
-        self.autor = "autor"
+        self.autor = autor
         self.ano = ano
-        self.editora = nome_editora
+        self.editora = editora
 
     def exibir_livro(self):
         self.titulo = " O alquimista"

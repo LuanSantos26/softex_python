@@ -1,6 +1,7 @@
 
 class ParticipantesTorneio:
-    def __init__(self, nome, idade, cpf):
+    def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
-        self.cpf = cpf
+        
+    def inscricao(self, nome, idade):
