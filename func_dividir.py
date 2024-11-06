@@ -13,3 +13,4 @@ def dividir():
         print ('Ocorreu um erro interno, fale com o suporte...')
 
 dividir()
+#
